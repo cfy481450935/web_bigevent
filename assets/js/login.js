@@ -33,7 +33,7 @@ $('#form_reg').on('submit',function(e){
     // return false
     $.ajax({
         type:"post",
-        url:"api/reguser",
+        url:"/api/reguser",
         data:{username:$('#form_reg [name=username]').val(),
             password:$('#form_reg [name=password]').val()},
         success:function(res){
@@ -51,7 +51,7 @@ $("#form_login").on('submit',function(e){
     e.preventDefault()
     $.ajax({
         type:'post',
-        url:'api/login',
+        url:'/api/login',
         data:$(this).serialize(),
         success:function(res){
             if (res.status!=0){
